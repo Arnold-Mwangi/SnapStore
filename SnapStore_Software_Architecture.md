@@ -57,12 +57,12 @@
 - Access: /purchases
 - Description: Authenticated users can view their purchase history.
 
-## Album CRUD:
+<!-- ## Album CRUD:
 
 - Create: /albums/create
 - Read: /albums/:albumId
 - Update: /albums/:albumId/edit
-- Delete: /albums/:albumId/delete
+- Delete: /albums/:albumId/delete -->
 
 ## Photo CRUD:
 
@@ -71,12 +71,12 @@
 - Update: /photos/:photoId/edit
 - Delete: /photos/:photoId/delete
 
-## Project CRUD:
+<!-- ## Project CRUD:
 
 - Create: /projects/create
 - Read: /projects/:projectId
 - Update: /projects/:projectId/edit
-- Delete: /projects/:projectId/delete
+- Delete: /projects/:projectId/delete -->
 
 # Publicly Accessible Routes (No Authentication Required)
 
@@ -89,7 +89,7 @@
 
 - Access: /photos
 - Description: Publicly accessible page to browse and search for photos.
-
+<!-- 
 ## Browse Albums:
 
 - Access: /albums
@@ -103,7 +103,7 @@
 ## View Public Album:
 
 - Access: /albums/:albumId
-- Description: Publicly accessible page to view a public album and its contents.
+- Description: Publicly accessible page to view a public album and its contents. -->
 
 ## View Public Photo:
 
@@ -143,7 +143,7 @@
   - Many-to-Many with Hashtag: A photo can have multiple hashtags.
   - Many-to-Many with PhotoPurchase: A photo can be purchased by multiple users.
 
-**Project:**
+<!-- **Project:**
 
 - Represents photography projects created by users.
 - Attributes:
@@ -171,7 +171,7 @@
 - Relationships:
   - Many-to-One with User: Many albums can belong to one user.
   - Many-to-Many with Photo: An album can contain multiple photos.
-  - Many-to-Many with AlbumPurchase: An album can be purchased by multiple users.
+  - Many-to-Many with AlbumPurchase: An album can be purchased by multiple users. -->
 
 **Transaction:**
 
@@ -197,7 +197,7 @@
   - Many-to-Many with Photo: A category can have multiple photos.
   - Many-to-Many with Project: A category can have multiple projects.
 
-**Hashtag:**
+<!-- **Hashtag:**
 
 - Represents hashtags associated with photos and projects.
 - Attributes:
@@ -205,7 +205,7 @@
   - name
 - Relationships:
   - Many-to-Many with Photo: A hashtag can be associated with multiple photos.
-  - Many-to-Many with Project: A hashtag can be associated with multiple projects.
+  - Many-to-Many with Project: A hashtag can be associated with multiple projects. -->
 
 **PhotoPurchase:**
 
@@ -219,7 +219,7 @@
   - Many-to-One with Photo: Many photo purchases can include one photo.
   - Many-to-One with Transaction: Many photo purchases can be part of one transaction.
 
-**AlbumPurchase:**
+<!-- **AlbumPurchase:**
 
 - Represents the purchase of user-created albums by users.
 - Attributes:
@@ -229,9 +229,9 @@
 - Relationships:
   - Many-to-One with User: Many album purchases can belong to one user.
   - Many-to-One with Album: Many album purchases can include one album.
-  - Many-to-One with Transaction: Many album purchases can be part of one transaction.
+  - Many-to-One with Transaction: Many album purchases can be part of one transaction. -->
 
-**ProjectPurchase:**
+<!-- **ProjectPurchase:**
 
 - Represents the purchase of photography projects by users.
 - Attributes:
@@ -241,7 +241,7 @@
 - Relationships:
   - Many-to-One with User: Many project purchases can belong to one user.
   - Many-to-One with Project: Many project purchases can include one project.
-  - Many-to-One with Transaction: Many project purchases can be part of one transaction.
+  - Many-to-One with Transaction: Many project purchases can be part of one transaction. -->
 
 **Cart:**
 
@@ -254,5 +254,5 @@
 - Relationships:
   - Many-to-One with User: A cart item belongs to one user. This relationship associates cart items with specific users.
   - Many-to-One with Photo: If item_type is "photo," establish a many-to-one relationship with the Photo model. This links the cart item to a specific photo.
-  - Many-to-One with Album: If item_type is "album," establish a many-to-one relationship with the Album model. This links the cart item to a specific album.
-  - Many-to-One with Project: If item_type is "project," establish a many-to-one relationship with the Project model. This links the cart item to a specific project.
+  <!-- - Many-to-One with Album: If item_type is "album," establish a many-to-one relationship with the Album model. This links the cart item to a specific albAum.
+  - Many-to-One with Project: If item_type is "project," establish a many-to-one relationship with the Project model. This links the cart item to a specific project. -->
